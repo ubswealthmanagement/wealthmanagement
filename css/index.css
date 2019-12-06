@@ -30,6 +30,11 @@ a{
   position: fixed;
   z-index: 10;
 }
+.menu-for-smallscreen i{
+  font-size: 35px;
+  margin-left: 21px;
+  text-shadow: 4px 4px 4px grey;
+}
 .bigscreen-menu-box{
   display: inline-block;
   float: right;
@@ -152,23 +157,72 @@ and (max-width: 3000px){
 .contact-box{
   border: 1px solid grey;
   width: 400px;
-  height: 300px;
   margin: auto;
   padding: 10px;
   border-radius: 5px;
 }
+
 @media screen and (min-width: 1189px)
 and (max-width: 600000px){
   .contact-box{
     border: 1px solid grey;
-    width: 400px;
-    height: 300px;
     position: absolute;
     top: 44px;
     right: 27px;
     position: fixed;
   }
 }
+.input-box{
+  background: #1c1100;
+  margin-top: 10px;
+  padding: 5px 0;
+  overflow: hidden;
+  display: none; /* COMBAK: Change this before launch */
+}
+.input-box p{
+  font-size: 29px;
+  color: #fff!important;
+  width: 95%;
+  margin: auto;
+  padding-top: 5px;
+}
+.input-box a{
+  background: #fff;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+
+.contact-information-box{
+}
+.customer-information-box h5{
+
+}
+.contact-information-box label{
+  display: block;
+  margin-top: 15px;
+  font-size: 20px;
+}
+.contact-information-box input{
+  border-radius: 5px;
+  padding: 5px;
+  width: 90%;
+  display: block;
+}
+.contact-information-box button{
+  padding: 5px;
+  border-radius: 5px;
+  border-color: transparent;
+  width: 100px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  background: #361406;
+  color: #fff;
+}
+.contact-information-box textarea{
+  width: 95%;
+}
+
 
 
 .footer{
