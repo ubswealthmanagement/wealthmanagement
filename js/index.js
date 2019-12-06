@@ -16,14 +16,25 @@ $(".menu-box ul li a").click(
   }
 );
 
+// WARNING: CONTACT RESPONSIVENESS
+$(".input-box a").click(
+  function(){
+    $(".input-box").animate(
+      {
+        left: '250px', opacity: '0.5', width: '0%'
+      }
+    );
+    $(".contact-information").fadeIn('slow');
+
+  }
+);
 
 
 
 
-
-
-
-
+$(window).bind('beforeunload', function(){
+	return '>>>>>Before You Go<<<<<<<< \n Your custom message go here';
+});
 
 
 
