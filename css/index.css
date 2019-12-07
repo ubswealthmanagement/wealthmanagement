@@ -29,6 +29,8 @@ a{
 .menu-for-smallscreen{
   position: fixed;
   z-index: 10;
+  background: #fff;
+  padding: 5px;
 }
 .menu-for-smallscreen i{
   font-size: 35px;
@@ -155,6 +157,7 @@ and (max-width: 3000px){
 
 /* WARNING: contact us */
 .contact-box{
+  overflow: auto;
   border: 1px solid grey;
   width: 400px;
   margin: auto;
@@ -175,12 +178,11 @@ and (max-width: 600000px){
 .input-box{
   background: #1c1100;
   margin-top: 10px;
-  padding: 5px 0;
+  padding: 8px 0;
   overflow: hidden;
-  display: none; /* COMBAK: Change this before launch */
 }
 .input-box p{
-  font-size: 29px;
+  font-size: 22px;
   color: #fff!important;
   width: 95%;
   margin: auto;
@@ -190,12 +192,26 @@ and (max-width: 600000px){
   background: #fff;
   margin-left: 10px;
   border-radius: 2px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.goback-box{
+  background: #361406;
+  color: #fff;
+  padding: 10px;
+  position:absolute;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  display: none;
+  cursor: pointer;
 }
 
 .contact-information-box{
+  display: none;
 }
 .customer-information-box h5{
-
 }
 .contact-information-box label{
   display: block;
@@ -223,7 +239,16 @@ and (max-width: 600000px){
   width: 95%;
 }
 
-
+.location-box{
+  height: 150px;
+  border: 1px solid grey;
+  display: none;
+}
+.location-box i{
+  font-size: 40px;
+  display: inline-block;
+  margin: 50px;
+}
 
 .footer{
   text-align: center;
