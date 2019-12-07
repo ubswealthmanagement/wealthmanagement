@@ -17,19 +17,40 @@ $(".menu-box ul li a").click(
 );
 
 // WARNING: CONTACT RESPONSIVENESS
-$(".input-box a").click(
+$(".opens-contact-btn").click(
   function(){
-    $(".input-box").animate(
-      {
-        left: '250px', opacity: '0.5', width: '0%'
-      }
+    $(".input-box").hide();
+    $(".contact-information-box").fadeIn('slow');
+    setTimeout(
+      function(){
+        $(".goback-box").show();
+      }, 2000
     );
-    $(".contact-information").fadeIn('slow');
 
   }
 );
-
-
+$(".goback-box").click(
+  function(){
+    $(".contact-information-box").fadeOut();
+    setTimeout(
+      function(){
+        $(".input-box").fadeIn();
+        $(".goback-box").hide();
+      },2000
+    );
+  }
+);
+$(".locate-btn").click(
+  function(){
+    $(".input-box").hide();
+    $(".location-box").slideDown();
+    setTimeout(
+      function(){
+        $(".")
+      },2000
+    );
+  }
+);
 
 
 $(window).bind('beforeunload', function(){
