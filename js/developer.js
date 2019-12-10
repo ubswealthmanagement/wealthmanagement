@@ -267,44 +267,38 @@ $("#acpassword-input").on('keyup',
 );
 function verifyPasswordLogin(){
   var acPassword = $("#acpassword-input").val();
-  if (acPassword == "") {
-    $("#acpassword-error").html("Enter a valid Pass").append("word");
-    $("#acpassword-input").val("");
-  }else {
-    if (acPassword == "admin") {
-      $(".verify-passcode-btn i").show();
-      setTimeout(
-        function(){
-          $(".verify-passcode-btn i").hide();
-          $("#login-box input").val("");
-          $(".user-login-container").hide();
-          $("#account-1").show();
-        }, 3000
-      );
-    }
-    if (acPassword == "admin2") {
-      $(".verify-passcode-btn i").show();
-      setTimeout(
-        function(){
-          $(".verify-passcode-btn i").hide();
-          $("#login-box input").val("");
-          $(".user-login-container").hide();
-          $("#account-2").show();
-        }, 3000
-      );
-    }
-
-
-    else{
-      $(".error-txt").html("Enter a valid account number/password");
-      setTimeout(
-        function(){
-          $(".error-txt").html("");
-        },3000
-      );
-    }
-
+  // WARNING:
+  if (acPassword =="wie1vv_ie1") {
+    $(".verify-passcode-btn i").show();
+    setTimeout(
+      function(){
+        $(".verify-passcode-btn i").hide();
+        $("#login-box input").val("");
+        $(".user-login-container").hide();
+        $("#account-1").show();
+      }, 3000
+    );
   }
+  else if (acPassword == "wie2vv_ie2") {
+    $(".verify-passcode-btn i").show();
+    setTimeout(
+      function(){
+        $(".verify-passcode-btn i").hide();
+        $("#login-box input").val("");
+        $(".user-login-container").hide();
+        $("#account-2").show();
+      }, 3000
+    );
+  }
+  else {
+    $(".error-txt").html("Enter a valid account number/password");
+    setTimeout(
+      function(){
+        $(".error-txt").html("");
+      },3000
+    );
+  }
+
 }
 $(".logout-btn").click(
   function(){
