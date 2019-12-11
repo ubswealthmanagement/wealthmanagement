@@ -430,6 +430,7 @@ and (max-width: 8000px){
   margin: auto;
   border-radius: 2px;
   padding: 5px;
+  cursor: pointer;
 }
 .confirm-box{
   box-shadow: 4px 4px 12px grey;
@@ -640,7 +641,7 @@ and (max-width: 8000px){
   cursor: pointer;
 }
 .transaction-history{
-  background: #fff;
+  background: #fff!important;
   width: 100%;
   position: absolute;
   top: 0;
@@ -670,6 +671,7 @@ and (max-width: 8000px){
   display: block;
   margin: auto;
   overflow: hidden;
+  overflow-y: auto;
 }
 .transaction-history-title-li{
   background: #1f57ff;
