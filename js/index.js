@@ -46,16 +46,13 @@ $(".locate-btn").click(
     $(".location-box").slideDown();
     setTimeout(
       function(){
-        $(".")
+        //$(".")
       },2000
     );
   }
 );
 
 
-$(window).bind('beforeunload', function(){
-	return '>>>>>Before You Go<<<<<<<< \n Your custom message go here';
-});
 
 
 
