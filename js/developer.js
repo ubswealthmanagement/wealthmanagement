@@ -48,16 +48,16 @@ $(".year-title").click(
   }
 );
 
-$("#account-1 .account-holder-name").html("Larry King Vounch");
+$("#account-1 .account-holder-name").html("Roland Arthur");
 $("#account-2 .account-holder-name").html("James King");
-$("#balance-for-account-1").html("5,215.25").prepend("<b class='fa fa-dollar'></b> ");
+$("#balance-for-account-1").html("3,815.25").prepend("<b class='fa fa-dollar'></b> ");
 $("#balance-for-account-2").html("15,000.00").prepend("<b class='fa fa-dollar'></b> ");
 
         //RECENT TRANSACTIONS FOR ACCOUNT 1
 $(".recent-transaction-title span").html("RECENTS TRANSACTIONS");
 
-$("#t-name-2019-a1-n0").html("Nab Etuadul"); $("#t-price-2019-a1-n0").html("$ 300.00"); $("#t-date-a1-n0").html("06/06/19");
-$("#t-name-2019-a1-n1").html("John Tipsy"); $("#t-price-2019-a1-n1").html("$ 400.00"); $("#t-date-a1-n1").html("07/07/19");
+$("#t-name-2019-a1-n0").html("John Rangler"); $("#t-price-2019-a1-n0").html("$ 300.00"); $("#t-date-a1-n0").html("06/06/19");
+$("#t-name-2019-a1-n1").html("Fee Payment(University of Sydney)"); $("#t-price-2019-a1-n1").html("$ 400.00"); $("#t-date-a1-n1").html("07/07/19");
 $("#t-name-2019-a1-n2").html("Tracy Colvich"); $("#t-price-2019-a1-n2").html("$ 500.00"); $("#t-date-a1-n2").html("08/08/19");
 $("#t-name-2019-a1-n2").html("Thomas Cantey"); $("#t-price-2019-a1-n3").html("$ 500.00"); $("#t-date-a1-n3").html("09/09/19");
 
@@ -237,7 +237,7 @@ function verifyAccNumberLogin(){
   if (acNumber == "") {
     $("#acnumber-error").html("");
   }else {
-    if (acNumber == "187") {
+    if (acNumber == "011623852957") {
       $(".verify-number-btn i").show();
       setTimeout(
         function(){
