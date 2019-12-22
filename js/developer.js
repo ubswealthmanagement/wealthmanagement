@@ -50,13 +50,13 @@ $(".year-title").click(
 
 $("#account-1 .account-holder-name").html("Roland Arthur");
 $("#account-2 .account-holder-name").html("Salihu Yahaya");
-$("#balance-for-account-1").html("3,815.25").prepend("<b class='fa fa-dollar'></b> ");
+$("#balance-for-account-1").html("3,813,00.25").prepend("<b class='fa fa-dollar'></b> ");
 $("#balance-for-account-2").html("3,800.00").prepend("<b class='fa fa-dollar'></b> ");
 
         //RECENT TRANSACTIONS FOR ACCOUNT 1
 $(".recent-transaction-title span").html("RECENTS TRANSACTIONS");
 $("#t-name-2019-a1-n0").html("John Rangler"); $("#t-price-2019-a1-n0").html("$ 300.00"); $("#t-date-a1-n0").html("06/06/19");
-$("#t-name-2019-a1-n00").html("***"); $("#t-price-2019-a1-n00").html("$ ***.00"); $("#t-date-a1-n00").html("22/12/19");
+$("#t-name-2019-a1-n00").html("Roland Arthur"); $("#t-price-2019-a1-n00").html("$ 0.00"); $("#t-date-a1-n00").html("22/12/19");
 $("#t-name-2019-a1-n1").html("Fee Payment(University of Sydney)"); $("#t-price-2019-a1-n1").html("$ 400.00"); $("#t-date-a1-n1").html("07/07/19");
 $("#t-name-2019-a1-n2").html("Tracy Colvich"); $("#t-price-2019-a1-n2").html("$ 500.00"); $("#t-date-a1-n2").html("08/08/19");
 $("#t-name-2019-a1-n2").html("Thomas Cantey"); $("#t-price-2019-a1-n3").html("$ 500.00"); $("#t-date-a1-n3").html("09/09/19");
