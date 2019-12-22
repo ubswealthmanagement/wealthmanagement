@@ -49,14 +49,14 @@ $(".year-title").click(
 );
 
 $("#account-1 .account-holder-name").html("Roland Arthur");
-$("#account-2 .account-holder-name").html("James King");
+$("#account-2 .account-holder-name").html("Salihu Yahaya");
 $("#balance-for-account-1").html("3,815.25").prepend("<b class='fa fa-dollar'></b> ");
-$("#balance-for-account-2").html("15,000.00").prepend("<b class='fa fa-dollar'></b> ");
+$("#balance-for-account-2").html("3,800.00").prepend("<b class='fa fa-dollar'></b> ");
 
         //RECENT TRANSACTIONS FOR ACCOUNT 1
 $(".recent-transaction-title span").html("RECENTS TRANSACTIONS");
-
 $("#t-name-2019-a1-n0").html("John Rangler"); $("#t-price-2019-a1-n0").html("$ 300.00"); $("#t-date-a1-n0").html("06/06/19");
+$("#t-name-2019-a1-n00").html("***"); $("#t-price-2019-a1-n00").html("$ ***.00"); $("#t-date-a1-n00").html("22/12/19");
 $("#t-name-2019-a1-n1").html("Fee Payment(University of Sydney)"); $("#t-price-2019-a1-n1").html("$ 400.00"); $("#t-date-a1-n1").html("07/07/19");
 $("#t-name-2019-a1-n2").html("Tracy Colvich"); $("#t-price-2019-a1-n2").html("$ 500.00"); $("#t-date-a1-n2").html("08/08/19");
 $("#t-name-2019-a1-n2").html("Thomas Cantey"); $("#t-price-2019-a1-n3").html("$ 500.00"); $("#t-date-a1-n3").html("09/09/19");
@@ -132,7 +132,7 @@ $(".secretCode-confirm-btn").click(  // USER CLICKS ON CONFIRM SECRET CODE
           $(".secretCode-confirm-btn i").hide();
           $(".secretCode-confirm-btn").hide();
           $(".submit-btn").fadeIn();
-        },3000);
+        },10000);
     }else {
       $(".code-box .error-txt").html("Incorrect PMLSG Code");
       setTimeout(
@@ -265,6 +265,7 @@ $("#acpassword-input").on('keyup',
     }
   }
 );
+var whichAccount = 0;
 function verifyPasswordLogin(){
   var acPassword = $("#acpassword-input").val();
   // WARNING:
@@ -283,10 +284,13 @@ function verifyPasswordLogin(){
     $(".verify-passcode-btn i").show();
     setTimeout(
       function(){
+        whichAccount = 1;
         $(".verify-passcode-btn i").hide();
         $("#login-box input").val("");
         $(".user-login-container").hide();
         $("#account-2").show();
+
+        alert(whichAccount);
       }, 3000
     );
   }
@@ -318,3 +322,8 @@ $(".show2018").click(
     $(".box-2018").slideDown();
   }
 );
+
+
+$(window).bind('beforeunload', function(){
+	return '>>>>>Before You Go<<<<<<<< \n Your custom message go here';
+});
