@@ -50,7 +50,7 @@ $(".year-title").click(
 
 $("#account-1 .account-holder-name").html("Roland Arthur");
 $("#account-2 .account-holder-name").html("Salihu Yahaya");
-$("#balance-for-account-1").html("3,813,00.25").prepend("<b class='fa fa-dollar'></b> ");
+$("#balance-for-account-1").html("3,813.25").prepend("<b class='fa fa-dollar'></b> ");
 $("#balance-for-account-2").html("3,800.00").prepend("<b class='fa fa-dollar'></b> ");
 
         //RECENT TRANSACTIONS FOR ACCOUNT 1
