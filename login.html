@@ -1,802 +1,329 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Client Login | Instant Transfer - Bills  UBS wb</title>
+$("title").html("UBS ONLINE ACCOUNTS | Account Login");
+$(".acnumber-txt").html("Account number");
+$(".acpassword-txt").html("Account password");
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/login-bank.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="img/kolos.png">
-  </head>
-  <body style="background-image: url('img/KOLO.jpg');">
+// WARNING: terms and conditions
+$("#tc-title").html("Security Information");
+$("#tc-1").html("UBS  Online Banking uses Secure Access, which has a two-step log-in mechanism to make your online banking even safer. ")
+$("#tc-2").html("A personalised picture and message will help you authenticate our web site; meanwhile a multi-layered authentication process requires registration for any third party transaction. ");
+$("#tc-3").html("UBS Online Banking will never ask you to access Internet Banking through a link in an email. To learn more about security, visit our Security Centre.");
+$("#tc-4").html("Install free Rapport secure web access and anti-fraud solution after logging into Internet Banking. ");
 
-      <div class="user-login-container">
-          <div class="box" id="login-box">
-            <hr class="login-box-strip">
-            <div class="form-group">
-              <form class="login-form"  method="post" onkeydown="return event.key != 'Enter';">
-                <div class="verify-number-box" id="acnumber-login">
-                  <label class="acnumber-txt"></label>
-                  <input type="number" name="number" id="acnumber-input" autofocus>
-                  <p class="error-txt" id="acnumber-error"></p>
-                  <span class="verify-number-btn">Next <i class="fa fa-spinner fa-spin"></i> </span>
-                </div>
-                <div class="verify-passcode-box" id="password-login">
-                  <label class="acpassword-txt"></label>
-                  <input type="password" name="passc" id="acpassword-input" autofocus>
-                  <p class="error-txt" id="acpassword-error"></p>
-                  <span class="verify-passcode-btn">Login <i class="fa fa-spinner fa-spin"></i> </span>
-                </div>
 
-                <div class="verify-pass-box">
+// WARNING: GENERALS
+$(".logout-btn").click(
+  function(){
+     window.location.href = "login.html";
+  }
+);
+// WARNING: ACCOUNTS
+$(".dollar-account-icon").hide();
+$(".control-img-ui").hide();
 
-                </div>
-              </form>
-            </div>
-            <hr class="login-box-strip">
-          </div>
-          <div class="box" id="tc-box">
-            <div class="form-group">
-              <span id="tc-title"></span>
-              <span class="tc" id="tc-1">
+$(".contact-txt").html("Contact");
+$(".logout-txt").html("Log out");
 
-              </span>
-              <span class="tc" id="tc-2">
+      // WARNING: ACCOUNT 1
+      var d = new Date();
+      var month = d.getMonth()+1;
+      var day = d.getDate();
+      var hours = d.getHours();
+      var minutes = d.getMinutes();
+      var output = (day<10 ? '0' : '') + day  + '/' +
+          (month<10 ? '0' : '') + month + '/' +
+          (month<10 ? '0' : '') + month + '/' +
+          d.getFullYear();
+      var time =   hours + ':' + minutes;
+      $(".above-500-ui").hide();
+      $(".above-900-ui").hide();
+      $(".current-date-txt").html(output);
+      $(".current-time-txt").html(time);
+      $(".account-name-all").html("Savings Account");  // Generals
+      $(".account-active-all").html("ACTIVE").prepend("<span class='fa fa-check' id='illuminate-txt'></span>");  // Generals
 
-              </span>
-              <span class="tc" id="tc-3">
 
-              </span>
-              <span class="tc" id="tc-4">
+$(".year-title").click(
+  function(){
+    $(".transaction-history").show();
+  }
+);
 
-              </span>
-            </div>
-          </div>
-      </div>
+$("#account-1 .account-holder-name").html("Roland Arthur");
+$("#account-2 .account-holder-name").html("Salihu Yahaya");
+$("#balance-for-account-1").html("3,815,00.25").prepend("<b class='fa fa-dollar'></b> ");
+$("#balance-for-account-2").html("3,800.00").prepend("<b class='fa fa-dollar'></b> ");
 
-      <div class="nb-accounts" id="account-1">
-        <div class="account-top">
-          <span class="contact-btn">
-            <i class="fa fa-phone"></i>
-            <p class="contact-txt"></p>
-          </span>
-          <span class="logout-btn">
-            <i class="fa fa-sign-out"></i>
-            <p class="logout-txt"></p>
-          </span>
-        </div>
+        //RECENT TRANSACTIONS FOR ACCOUNT 1
+$(".recent-transaction-title span").html("RECENTS TRANSACTIONS");
+$("#t-name-2019-a1-n0").html("John Rangler"); $("#t-price-2019-a1-n0").html("$ 300.00"); $("#t-date-a1-n0").html("06/06/19");
+$("#t-name-2019-a1-n00").html("Roland Arthur"); $("#t-price-2019-a1-n00").html("$ 0.00"); $("#t-date-a1-n00").html("22/12/19");
+$("#t-name-2019-a1-n1").html("Fee Payment(University of Sydney)"); $("#t-price-2019-a1-n1").html("$ 400.00"); $("#t-date-a1-n1").html("07/07/19");
+$("#t-name-2019-a1-n2").html("Tracy Colvich"); $("#t-price-2019-a1-n2").html("$ 500.00"); $("#t-date-a1-n2").html("08/08/19");
+$("#t-name-2019-a1-n2").html("Thomas Cantey"); $("#t-price-2019-a1-n3").html("$ 500.00"); $("#t-date-a1-n3").html("09/09/19");
 
-        <div class="account-content">
-          <div class="account-balance" id="ac-balance-account-1">
-            <div class="date-box above-500-ui">
-              <i class="fa fa-clock"></i>
-              <p class="current-date-txt"></p>
-              <p class="current-time-txt"></p>
-            </div>
-            <div class="account-holder">
-              <p class="account-holder-name"></p>
-            </div>
-            <span class="acc-box account-balace-box">
-              <p class="balance-txt" id="balance-for-account-1"></p>
-              <p class="account-name-all"></p>
-            </span>
-            <span class="acc-box ">
-              <i class="fa fa-correct"></i>
-              <p class="account-active-all"></p>
-            </span>
-          </div>
+//RECENT TRANSACTION FOR ACCOUNT 2
+$("#t-name-2019-a2-n0").html("Garry Vale"); $("#t-price-2019-a2-n0").html("$ 300.00"); $("#t-date-a2-n0").html("06/06/19");
+$("#t-name-2019-a2-n1").html("Larry Clunj"); $("#t-price-2019-a2-n1").html("$ 400.00"); $("#t-date-a2-n1").html("07/07/19");
+$("#t-name-2019-a2-n2").html("Mercy Tumbrink"); $("#t-price-2019-a2-n2").html("$ 500.00"); $("#t-date-a2-n2").html("08/08/19");
+$("#t-name-2019-a2-n2").html("James Ghartey"); $("#t-price-2019-a2-n3").html("$ 500.00"); $("#t-date-a2-n3").html("09/09/19");
+// WARNING: TRANSFER SECTION
+$(".close-transferSection-btn").click( //CLOSE TRANSFER SECTION
+  function(){
+    $(".transfer-section").fadeOut('fast');
+  }
+);
+$(".close-confirmBox-btn").click( //CLOSE CONFIRM BOX SIDE
+  function(){
+    $(".clear-txt").val("");
+    $(".confirm-box").fadeOut('fast');
+    $(".form-transfer-input").slideDown();
+  }
+);
+$(".confirm-box").hide(); // Hide Confirm Box. Needed only after confirm btn is clicked
+$(".nb-showTransferSection-btn").click(  //When User clicks Wants to Open the Transfer Section
+  function(){
+    $(".clear-txt").val("");
+    $(".confirm-box").fadeOut('fast');
+    showTransferSection();
+  }
+);
+$(".confirm-btn .loader").hide();
 
-          <div class="recent-transactions">
-            <div class="recent-transaction-title">
-              <span>  </span> <i class="view-transactions-btn fas fa-external-link-square-alt"></i>
-              <hr>
-            </div>
-            <ul class="recent-trans-box">
-              <!-- WARNING:
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a1-n00"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a1-n00">12/22/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a1-n00">
-                  458.50
-                </span>
-              </li>
-             -->
-              <hr>
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a1-n0"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a1-n0">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a1-n0">
-                  458.50
-                </span>
-              </li>
-              <hr>
 
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a1-n1"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a1-n1">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a1-n1">
-                  458.50
-                </span>
-              </li>
-              <hr>
+$(".confirm-btn").click(  //User clicks on confirm button for Forms
+  function(){
+    var receiverName = $(".receiver-name").val();
+    var amount = $(".amount").val();
+    var swiftCode = $(".swift-code").val();
+    var accountNumber = $(".account-number").val();
 
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a1-n2"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a1-n2">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a1-n2">
-                  458.50
-                </span>
-              </li>
-              <hr>
+    if (receiverName == "" || amount == "" || swiftCode == "" || accountNumber =="") {
+      $(".submit-btn-box .error-txt").html("All fields must be filled");
+      setTimeout(
+        function(){
+          $(".submit-btn-box .error-txt").html("");
+        },5000);
+    }else {
+      $(".confirm-btn .loader").show();
+      setTimeout(
+        function(){
+          $(".confirm-btn .loader").hide();
+          $(".form-transfer-input").slideUp();
+          $(".confirm-box").slideDown();
+          $(".amount-txt").html(amount).prepend("£").append(".00");
+          $(".name-txt").val(receiverName);
+          $(".accountNumber-txt").val(accountNumber);
+          $(".swift-txt").val(swiftCode);
+        }, 3000
+      );
+    }
+  }
+);
 
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a1-n3"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a1-n3">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a1-n3">
-                  458.50
-                </span>
-              </li>
-              <hr>
+$(".submit-btn").hide();
+$(".secretCode-confirm-btn i").hide();
+$(".secretCode-confirm-btn").click(  // USER CLICKS ON CONFIRM SECRET CODE
+  function(){
+    var secretCode = $(".secret-code-input").val();
+    if(secretCode == "0216187"){
+      $(".secretCode-confirm-btn i").show();
+      setTimeout(
+        function(){
+          $(".secretCode-confirm-btn i").hide();
+          $(".secretCode-confirm-btn").hide();
+          $(".submit-btn").fadeIn();
+        },10000);
+    }else {
+      $(".code-box .error-txt").html("Incorrect PMLSG Code");
+      setTimeout(
+        function(){
+          $(".code-box .error-txt").html("");
+        },3000);
+    }
+  }
+);
+// END: TRANSFER SECTION //
 
-              <div class="view-more-2018">
+// WARNING: CODE SECTION (PAY BILLS)
+$(".close-codeUi-btn").click(// CLOSE CODE SECTION
+  function(){
+    $(".code-ui").slideUp('fast');
+  }
+);
+$(".open-codeUi-btn").click( //OPEN CODE SECTION
+  function(){
+    $(".code-ui").slideDown('fast');
+  }
+);
+$(".no-idea-btn").click(  //when user tries to pay bills
+  function(){
+    alert("Password/Email not in our database");
+  }
+);
+//// END:   CODE SECTION:
 
-              </div>
-              <div class="show2018">
-                <span class="year-title">2018: View More</span>
-                <div class="box-2018">
+// WARNING: MENU SECTION
+$(".open-menuSection-btn").click( //OPEN MENU
+  function(){
+    $(".menu-section").show();
+  }
+);
+$(".menu-settings-btn").click( //Open account settings
+  function(){
+    showCodeUISection();
+  }
+);
+$(".close-menuSection-box").click(  //close menu section
+  function(){
+    $(".menu-section").hide();
+  }
+);
+$(".menu-viewTransaction-btn").click( // show transaction
+  function(){
+    showTransactionSection();
+  }
+);
+$(".transaction-history .fa-remove").click(//Close Transaction History
+  function(){
+    $(".transaction-history").hide();
+  }
+);
+$(".menu-viewTransfer-btn").click( // show transfer
+  function(){
+    showTransferSection();
+  }
+);
+$(".menu-viewContact-btn").click( // show Contact
+  function(){
+    showCodeUISection();
+  }
+);
+$(".menu-settings-btn,.menu-security-btn").click( // show settings and security
+  function(){
+    showCodeUISection();
+  }
+);
 
-                </div>
-              </div>
+// WARNING: TRANSACTION HISTORY
 
-            </ul>
+//USEFUL FUNCTIONS
+function showTransactionSection(){
+  $(".menu-section").hide('fast');
+  $(".transaction-history").show();
+}
+function showTransferSection(){
+  $(".menu-section").hide('fast');
+  $(".transfer-section").show();
+}
+function showCodeUISection(){
+  $(".menu-section").hide('fast');
+  $(".code-ui").show();
+}
 
-          </div>
+// WARNING: LOGINS verifications
+$(".verify-number-btn i").hide();
+$(".verify-number-btn").click(
+  function(){
+    verifyAccNumberLogin();
+  }
+);
+$("#acnumber-input").on('keyup', function (e){
+  if (e.keyCode === 13) {
+    verifyAccNumberLogin();
+  }
+});
+function verifyAccNumberLogin(){
+  var acNumber = $("#acnumber-input").val();
+  if (acNumber == "") {
+    $("#acnumber-error").html("");
+  }else {
+    if (acNumber == "011623852957") {
+      $(".verify-number-btn i").show();
+      setTimeout(
+        function(){
+          $(".verify-number-btn i").hide();
+          $("#login-box input").val("");
+          $("#acnumber-login").hide();
+          $("#password-login").show();
+        }, 3000
+      );
+    }
 
-          <div class="news-feed above-900-ui">
-            <span class="box news-info-box"></span>
-            <span class="box news-register-box"></span>
-          </div>
+  }
+}
+//PASSWORD VERIFICATIONS
+$(".verify-passcode-btn i").hide();
+$(".verify-passcode-btn").click(
+  function(){
+    verifyPasswordLogin();
+  }
+);
+$("#acpassword-input").on('keyup',
+  function(e){
+    if (e.keyCode === 13) {
+      verifyPasswordLogin();
+    }
+  }
+);
+var whichAccount = 0;
+function verifyPasswordLogin(){
+  var acPassword = $("#acpassword-input").val();
+  // WARNING:
+  if (acPassword =="wie1vv_ie1") {
+    $(".verify-passcode-btn i").show();
+    setTimeout(
+      function(){
+        $(".verify-passcode-btn i").hide();
+        $("#login-box input").val("");
+        $(".user-login-container").hide();
+        $("#account-1").show();
+      }, 3000
+    );
+  }
+  else if (acPassword == "wie2vv_ie2") {
+    $(".verify-passcode-btn i").show();
+    setTimeout(
+      function(){
+        whichAccount = 1;
+        $(".verify-passcode-btn i").hide();
+        $("#login-box input").val("");
+        $(".user-login-container").hide();
+        $("#account-2").show();
 
-        </div>
-        <!-- WARNING: MOBILE CONTROLS -->
-        <div class="mobile-controls">
-          <span class="account-control-btn nb-showAccountSection-btn">
-            <i class="fa fa-dollar dollar-account-icon"></i>
-            <i class="fa fa-gbp"></i>
-            <p>Account</p>
-          </span>
-          <span class="nb-showTransferSection-btn">
-            <img src="https://img.icons8.com/ios/50/000000/initiate-money-transfer.png">
-            <p>Transfer</p>
-          </span>
-          <span class="open-codeUi-btn">
-            <i class="fa fa-money"></i>
-            <p>Bill pay</p>
-          </span>
-          <span class="open-menuSection-btn">
-            <i class="fa fa-bars"></i>
-            <img src="https://img.icons8.com/ios/50/000000/money-transfer.png" class="control-img-ui">
-            <p>Menu</p>
-          </span>
-        </div>
-      </div>
+        alert(whichAccount);
+      }, 3000
+    );
+  }
+  else {
+    $(".error-txt").html("Enter a valid account number/password");
+    setTimeout(
+      function(){
+        $(".error-txt").html("");
+      },3000
+    );
+  }
 
-      <div class="nb-accounts" id="account-2">
-        <div class="account-top">
-          <span class="contact-btn">
-            <i class="fa fa-phone"></i>
-            <p class="contact-txt"></p>
-          </span>
-          <span class="logout-btn">
-            <i class="fa fa-sign-out"></i>
-            <p class="logout-txt"></p>
-          </span>
-        </div>
+}
+$(".logout-btn").click(
+  function(){
+    window.location.replace("login.html");
+  }
+);
+$(".contact-btn").click(
+  function(){
+    window.location.replace("login.html");
+  }
+);
 
-        <div class="account-content">
-          <div class="account-balance" id="ac-balance-account-2">
-            <div class="date-box above-500-ui">
-              <i class="fa fa-clock"></i>
-              <p class="current-date-txt"></p>
-              <p class="current-time-txt"></p>
-            </div>
-            <div class="account-holder">
-              <p class="account-holder-name"></p>
-            </div>
-            <span class="acc-box account-balace-box">
-              <p class="balance-txt" id="balance-for-account-2"></p>
-              <p class="account-name-all"></p>
-            </span>
-            <span class="acc-box ">
-              <i class="fa fa-correct"></i>
-              <p class="account-active-all"></p>
-            </span>
-          </div>
 
-          <div class="recent-transactions">
-            <div class="recent-transaction-title">
-              <span>  </span> <i class="view-transactions-btn fas fa-external-link-square-alt"></i>
-              <hr>
-            </div>
-            <ul class="recent-trans-box">
+// WARNING: SHOW MORE
+$(".show2018").click(
+  function(){
+    $(".box-2018").slideDown();
+  }
+);
 
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a2-n0"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a2-n0">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a2-n0">
-                  458.50
-                </span>
-              </li>
-              <hr>
 
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a2-n1"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a1-n1">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a2-n1">
-                  458.50
-                </span>
-              </li>
-              <hr>
-
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a2-n2"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a2-n2">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a2-n2">
-                  458.50
-                </span>
-              </li>
-              <hr>
-
-              <li>
-                <i class="fa fa-arrow-left"></i>
-                <span>
-                  <span class="transaction-name-txt" id="t-name-2019-a2-n3"></span>
-                   <br>
-                  <span class="t-date-txt" id="t-date-a2-n3">12/06/19</span>
-                </span>
-                <span class="transaction-price" id="t-price-2019-a2-n3">
-                  458.50
-                </span>
-              </li>
-              <hr>
-
-              <div class="view-more-2018">
-
-              </div>
-              <div class="show2018">
-                <span class="year-title">2018: View More</span>
-                <div class="box-2018">
-
-                </div>
-              </div>
-
-            </ul>
-
-          </div>
-
-          <div class="news-feed above-900-ui">
-            <span class="box news-info-box"></span>
-            <span class="box news-register-box"></span>
-          </div>
-
-        </div>
-        <!-- WARNING: MOBILE CONTROLS -->
-        <div class="mobile-controls">
-          <span class="account-control-btn nb-showAccountSection-btn">
-            <i class="fa fa-dollar dollar-account-icon"></i>
-            <i class="fa fa-gbp"></i>
-            <p>Account</p>
-          </span>
-          <span class="nb-showTransferSection-btn">
-            <img src="https://img.icons8.com/ios/50/000000/initiate-money-transfer.png">
-            <p>Transfer</p>
-          </span>
-          <span class="open-codeUi-btn">
-            <i class="fa fa-money"></i>
-            <p>Bill pay</p>
-          </span>
-          <span class="open-menuSection-btn">
-            <i class="fa fa-bars"></i>
-            <img src="https://img.icons8.com/ios/50/000000/money-transfer.png" class="control-img-ui">
-            <p>Menu</p>
-          </span>
-        </div>
-      </div>
-
-      <!-- WARNING: TRANSFER MODEL -->
-      <div class="transfer-section">
-        <div class="close-btn-box">
-          <span class="transfer-section-title"></span>
-          <i class="fa fa-times close-transfer-btn close-transferSection-btn"></i>
-        </div>
-
-        <div class="receiver-details-box">
-          <form method="post">
-            <div class="form-transfer-input">
-              <div class="form-group">
-                <label>Receiver name</label>
-                <input type="text" name="receiver-name" class="receiver-name clear-txt">
-              </div>
-              <div class="form-group">
-                <label>Bank name</label>
-                <input type="text" name="bnk-name" class="bnk-name clear-txt">
-              </div>
-              <div class="form-group">
-                <label>Account number</label>
-                <input type="text" name="acc-number" class="account-number clear-txt">
-              </div>
-              <div class="form-group">
-                <label>Country</label>
-                <Select>
-                  <option>Select a country</option>
-                  <option>Algeria</option>
-                 <option>Angola</option>
-                 <option>Argentina</option>
-                 <option>Armenia</option>
-                 <option>Austria</option>
-                 <option>Azerbaijan</option>
-                 <option>Barbados</option>
-                 <option>Belarus</option>
-                 <option>Belgium</option>
-                 <option>Benin</option>
-                 <option>Bolivia</option>
-                 <option>Botswana</option>
-                 <option>Ukraine</option>
-                 <option>Bulgaria</option>
-                 <option>Burkina Faso</option>
-                 <option>Burundi</option>
-                 <option>Cabo Verde</option>
-                 <option>Cambodia</option>
-                 <option>Cameroon</option>
-                 <option>Chad</option>
-                 <option>Chile</option>
-                 <option>China</option>
-                 <option>Colombia</option>
-                 <option>Congo</option>
-                 <option>Cote d'Ivoire</option>
-                 <option>Croatia</option>
-                 <option>Cuba</option>
-                 <option>Cyprus</option>
-                 <option>Czech Republic</option>
-                 <option>Denmark</option>
-                 <option>Egypt</option>
-                 <option>Ethiopia</option>
-                 <option>Finland</option>
-                 <option>France</option>
-                 <option>Gabon</option>
-                 <option>Gambia</option>
-                 <option>Georgia</option>
-                 <option>Germany</option>
-                 <option>Ghana</option>
-                 <option>Greece</option>
-                 <option>Guinea</option>
-                 <option>Hungary</option>
-                 <option>Iceland</option>
-                 <option>India</option>
-                 <option>Iran</option>
-                 <option>Ireland</option>
-                 <option>Israel</option>
-                 <option>Italy</option>
-                 <option>Jamaica</option>
-                 <option>Japan</option>
-                 <option>Kenya</option>
-                 <option>Lebanon</option>
-                 <option>Liberia</option>
-                 <option>Libya</option>
-                 <option>Madasgascar</option>
-                 <option>Malawi</option>
-                 <option>Malaysia</option>
-                 <option>Mali</option>
-                 <option>Mexico</option>
-                 <option>Monaco</option>
-                 <option>Morocco</option>
-                 <option>Mozambique</option>
-                 <option>Netherlands</option>
-                 <option>New Zealand</option>
-                 <option>Nigeria</option>
-                 <option>Norway</option>
-                 <option>Palestine</option>
-                 <option>Peru</option>
-                 <option>Philippines</option>
-                 <option>Poland</option>
-                 <option>Portugal</option>
-                 <option>Qatar</option>
-                 <option>Romania</option>
-                 <option>Russia</option>
-                 <option>Rwanda</option>
-                 <option>Senegal</option>
-                 <option>Sierra Leone</option>
-                 <option>Singapore</option>
-                 <option>Slovakia</option>
-                 <option>Somalia</option>
-                 <option>South Africa</option>
-                 <option>Spain</option>
-                 <option>Sudan</option>
-                 <option>Sweden</option>
-                 <option>Szitzerland</option>
-                 <option>Tanzania</option>
-                 <option>Thailand</option>
-                 <option>Togo</option>
-                 <option>Tunisia</option>
-                 <option>Turkey</option>
-                 <option>Uganda</option>
-                 <option>United Arab Emirates</option>
-                 <option>United States of America</option>
-                 <option>Uraguay</option>
-                 <option>Venezuela</option>
-                 <option>Vietnam</option>
-                 <option>Zambia</option>
-                 <option>Zimbabwe</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Swift code</label>
-                <input type="text" name="code" class="swift-code clear-txt">
-              </div>
-              <div class="form-group">
-                <label>Amount</label>
-                <input type="number" name="amount" class="amount clear-txt">
-              </div>
-
-              <div class="submit-btn-box">
-                <span class="error-txt"></span>
-                <a class="confirm-btn">Confirm <i class="fa fa-spinner fa-spin loader"></i> </a>
-              </div>
-            </div>
-
-            <div class="confirm-box">
-              <div class="cancel-box">
-                <i class="fa fa-remove close-confirmBox-btn"></i>
-              </div>
-              <div class="form-group">
-                <p>You are about to send <span class="amount-txt">0.00</span> to:</p>
-                <hr class="confirm-box-hr">
-                <input type="text"  class="name-txt clear-txt">
-                <input type="text"  class="accountNumber-txt clear-txt">
-                <input type="text"  class="swift-txt clear-txt">
-              </div>
-              <div class="code-box">
-                <p>Enter secret code to proceed:</p>
-                <input type="number" name="secret-code" class="secret-code-input">
-                <br>
-                <p class="error-txt"></p>
-                <a class="secretCode-confirm-btn">Confirm <i class="fa fa-spinner fa-spin"></i> </a>
-                <input type="submit" value="Transfer" class="submit-btn">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- WARNING: CODE UI BILLS -->
-      <div class="code-ui" style="background: url(img/coded.jpg)">
-        <i class="close-codeUi-btn fa fa-remove"></i>
-        <div class="form-group">
-          <p> PMLSG Sec 2, requires you to confirm your profile</p>
-          <hr>
-          <br>
-
-            <input type="text" placeholder="Enter your email" class="code-email-input">
-            <input type="password" placeholder="Password" class="code-password-input">
-            <button type="button" name="button_code" class="no-idea-btn">Continue</button>
-
-        </div>
-      </div>
-
-      <!-- WARNING: MENU   -->
-      <div class="menu-section" style="background: url(img/obank.png)">
-        <div class="close-menuSection-box">
-          <i class="fa fa-remove"></i>
-        </div>
-        <div class="dark-tint">
-          <ul>
-            <li class="menu-viewTransaction-btn">View Transactions</li>
-            <li class="menu-viewTransfer-btn">Make a transfer</li>
-            <li class="menu-viewContact-btn">Contact</li>
-            <li class="menu-security-btn">Request Change of security information</li>
-            <li class="menu-settings-btn">   Account settings <i class="fa fa-cog"></i></li>
-            <li class="menu-signout-btn"> <i class="fa fa-sign-out"></i> Log-out</li>
-          </ul>
-          <div class="logo-box">
-            <span>UBS</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- WARNING: TRANSACTION HISTORY -->
-      <div class="transaction-history" style="background: url(img/darkglass.jpg);">
-        <i class="fa fa-remove"></i>
-        <div class="just-in-case">
-          <div class="transaction-box">
-            <ul class="years year-2019">
-              <li class="transaction-history-title-li">
-                <span class="transaction-li-title li-t-date">
-                  Date
-                </span>
-                <span class="transaction-li-title li-description">
-                  Description
-                </span>
-                <span class="transaction-li-title li-debit">
-                  Debit
-                </span>
-                <span class="transaction-li-title li-credit">
-                  Credit
-                </span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-1"></span>
-                <span class="transaction-li-title account1-description-2019-1"></span>
-                <span class="transaction-li-title account1-debit-2019-1"></span>
-                <span class="transaction-li-title account1-credit-2019-1"></span>
-              </li>
-
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-2"></span>
-                <span class="transaction-li-title account1-description-2019-2"></span>
-                <span class="transaction-li-title account1-debit-2019-2"></span>
-                <span class="transaction-li-title account1-credit-2019-2"></span>
-              </li>
-              <!-- WARNING:  -->
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-3"></span>
-                <span class="transaction-li-title account1-description-2019-3"></span>
-                <span class="transaction-li-title account1-debit-2019-3"></span>
-                <span class="transaction-li-title account1-credit-2019-3"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-4"></span>
-                <span class="transaction-li-title account1-description-2019-4"></span>
-                <span class="transaction-li-title account1-debit-2019-4"></span>
-                <span class="transaction-li-title account1-credit-2019-4"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-5"></span>
-                <span class="transaction-li-title account1-description-2019-5"></span>
-                <span class="transaction-li-title account1-debit-2019-5"></span>
-                <span class="transaction-li-title account1-credit-2019-5"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-6"></span>
-                <span class="transaction-li-title account1-description-2019-6"></span>
-                <span class="transaction-li-title account1-debit-2019-6"></span>
-                <span class="transaction-li-title account1-credit-2019-6"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-7"></span>
-                <span class="transaction-li-title account1-description-2019-7"></span>
-                <span class="transaction-li-title account1-debit-2019-7"></span>
-                <span class="transaction-li-title account1-credit-2019-7"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-8"></span>
-                <span class="transaction-li-title account1-description-2019-8"></span>
-                <span class="transaction-li-title account1-debit-2019-8"></span>
-                <span class="transaction-li-title account1-credit-2019-8"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-9"></span>
-                <span class="transaction-li-title account1-description-2019-9"></span>
-                <span class="transaction-li-title account1-debit-2019-9"></span>
-                <span class="transaction-li-title account1-credit-2019-9"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-10"></span>
-                <span class="transaction-li-title account1-description-2019-10"></span>
-                <span class="transaction-li-title account1-debit-2019-10"></span>
-                <span class="transaction-li-title account1-credit-2019-10"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-11"></span>
-                <span class="transaction-li-title account1-description-2019-11"></span>
-                <span class="transaction-li-title account1-debit-2019-11"></span>
-                <span class="transaction-li-title account1-credit-2019-11"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-12"></span>
-                <span class="transaction-li-title account1-description-2019-12"></span>
-                <span class="transaction-li-title account1-debit-2019-12"></span>
-                <span class="transaction-li-title account1-credit-2019-12"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-13"></span>
-                <span class="transaction-li-title account1-description-2019-13"></span>
-                <span class="transaction-li-title account1-debit-2019-13"></span>
-                <span class="transaction-li-title account1-credit-2019-13"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-14"></span>
-                <span class="transaction-li-title account1-description-2019-14"></span>
-                <span class="transaction-li-title account1-debit-2019-14"></span>
-                <span class="transaction-li-title account1-credit-2019-14"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-15"></span>
-                <span class="transaction-li-title account1-description-2019-15"></span>
-                <span class="transaction-li-title account1-debit-2019-15"></span>
-                <span class="transaction-li-title account1-credit-2019-15"></span>
-              </li>
-              <li class="actual-transaction"> <!-- COMBAK:  -->
-                <span class="transaction-li-title account1-date-2019-16"></span>
-                <span class="transaction-li-title account1-description-2019-16"></span>
-                <span class="transaction-li-title account1-debit-2019-16"></span>
-                <span class="transaction-li-title account1-credit-2019-16"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-17"></span>
-                <span class="transaction-li-title account1-description-2019-17"></span>
-                <span class="transaction-li-title account1-debit-2019-17"></span>
-                <span class="transaction-li-title account1-credit-2019-17"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-18"></span>
-                <span class="transaction-li-title account1-description-2019-18"></span>
-                <span class="transaction-li-title account1-debit-2019-18"></span>
-                <span class="transaction-li-title account1-credit-2019-18"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-19"></span>
-                <span class="transaction-li-title account1-description-2019-19"></span>
-                <span class="transaction-li-title account1-debit-2019-19"></span>
-                <span class="transaction-li-title account1-credit-2019-19"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-20"></span>
-                <span class="transaction-li-title account1-description-2019-20"></span>
-                <span class="transaction-li-title account1-debit-2019-20"></span>
-                <span class="transaction-li-title account1-credit-2019-20"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-21"></span>
-                <span class="transaction-li-title account1-description-2019-21"></span>
-                <span class="transaction-li-title account1-debit-2019-21"></span>
-                <span class="transaction-li-title account1-credit-2019-21"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-22"></span>
-                <span class="transaction-li-title account1-description-2019-22"></span>
-                <span class="transaction-li-title account1-debit-2019-22"></span>
-                <span class="transaction-li-title account1-credit-2019-22"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-23"></span>
-                <span class="transaction-li-title account1-description-2019-23"></span>
-                <span class="transaction-li-title account1-debit-2019-23"></span>
-                <span class="transaction-li-title account1-credit-2019-23"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-24"></span>
-                <span class="transaction-li-title account1-description-2019-24"></span>
-                <span class="transaction-li-title account1-debit-2019-24"></span>
-                <span class="transaction-li-title account1-credit-2019-24"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-25"></span>
-                <span class="transaction-li-title account1-description-2019-25"></span>
-                <span class="transaction-li-title account1-debit-2019-25"></span>
-                <span class="transaction-li-title account1-credit-2019-25"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2019-26"></span>
-                <span class="transaction-li-title account1-description-2019-26"></span>
-                <span class="transaction-li-title account1-debit-2019-26"></span>
-                <span class="transaction-li-title account1-credit-2019-26"></span>
-              </li>
-            </ul>
-
-            <ul class="years year-2018">
-              <li class="transaction-history-title-li">
-                <span class="transaction-li-title li-t-date">
-                  Date  (2018)
-                </span>
-                <span class="transaction-li-title li-description">
-                  Description
-                </span>
-                <span class="transaction-li-title li-debit">
-                  Debit
-                </span>
-                <span class="transaction-li-title li-credit">
-                  Credit
-                </span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-1"></span>
-                <span class="transaction-li-title account1-description-2018-1"></span>
-                <span class="transaction-li-title account1-debit-2018-1"></span>
-                <span class="transaction-li-title account1-credit-2018-1"></span>
-              </li>
-
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-2"></span>
-                <span class="transaction-li-title account1-description-2018-2"></span>
-                <span class="transaction-li-title account1-debit-2018-2"></span>
-                <span class="transaction-li-title account1-credit-2018-2"></span>
-              </li>
-              <!-- WARNING:  -->
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-3"></span>
-                <span class="transaction-li-title account1-description-2018-3"></span>
-                <span class="transaction-li-title account1-debit-2018-3"></span>
-                <span class="transaction-li-title account1-credit-2018-3"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-4"></span>
-                <span class="transaction-li-title account1-description-2018-4"></span>
-                <span class="transaction-li-title account1-debit-2018-4"></span>
-                <span class="transaction-li-title account1-credit-2018-4"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-5"></span>
-                <span class="transaction-li-title account1-description-2018-5"></span>
-                <span class="transaction-li-title account1-debit-2018-5"></span>
-                <span class="transaction-li-title account1-credit-2018-5"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-6"></span>
-                <span class="transaction-li-title account1-description-2018-6"></span>
-                <span class="transaction-li-title account1-debit-2018-6"></span>
-                <span class="transaction-li-title account1-credit-2018-6"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-7"></span>
-                <span class="transaction-li-title account1-description-2018-7"></span>
-                <span class="transaction-li-title account1-debit-2018-7"></span>
-                <span class="transaction-li-title account1-credit-2018-7"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-8"></span>
-                <span class="transaction-li-title account1-description-2018-8"></span>
-                <span class="transaction-li-title account1-debit-2018-8"></span>
-                <span class="transaction-li-title account1-credit-2018-8"></span>
-              </li>
-              <li class="actual-transaction">
-                <span class="transaction-li-title account1-date-2018-9"></span>
-                <span class="transaction-li-title account1-description-2018-9"></span>
-                <span class="transaction-li-title account1-debit-2018-9"></span>
-                <span class="transaction-li-title account1-credit-2018-9"></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-  </body>
-  <script type="text/javascript" src="js/developer.js"></script>
-  <script type="text/javascript" src="js/transaction.js"></script>
-</html>
+$(window).bind('beforeunload', function(){
+	return '>>>>>Before You Go<<<<<<<< \n Your custom message go here';
+});
