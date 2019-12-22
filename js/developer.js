@@ -56,7 +56,7 @@ $("#balance-for-account-2").html("3,800.00").prepend("<b class='fa fa-dollar'></
         //RECENT TRANSACTIONS FOR ACCOUNT 1
 $(".recent-transaction-title span").html("RECENTS TRANSACTIONS");
 $("#t-name-2019-a1-n0").html("John Rangler"); $("#t-price-2019-a1-n0").html("$ 300.00"); $("#t-date-a1-n0").html("06/06/19");
-$("#t-name-2019-a1-n00").html("Roland Arthur"); $("#t-price-2019-a1-n00").html("$ 0.00"); $("#t-date-a1-n00").html("22/12/19");
+$("#t-name-2019-a1-n00").html("Roland Arthur"); $("#t-price-2019-a1-n00").html("$ 2000.00"); $("#t-date-a1-n00").html("22/12/19");
 $("#t-name-2019-a1-n1").html("Fee Payment(University of Sydney)"); $("#t-price-2019-a1-n1").html("$ 400.00"); $("#t-date-a1-n1").html("07/07/19");
 $("#t-name-2019-a1-n2").html("Tracy Colvich"); $("#t-price-2019-a1-n2").html("$ 500.00"); $("#t-date-a1-n2").html("08/08/19");
 $("#t-name-2019-a1-n2").html("Thomas Cantey"); $("#t-price-2019-a1-n3").html("$ 500.00"); $("#t-date-a1-n3").html("09/09/19");
