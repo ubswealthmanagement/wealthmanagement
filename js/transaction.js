@@ -1,3 +1,13 @@
+$(".account1-date-2019-00").html("22-Dec-19");
+$(".account1-description-2019-00").html("Monte Carlo Saadiyat Ltd");
+$(".account1-debit-2019-00").html("0.00");
+$(".account1-credit-2019-00").html("1,315,000.00");
+
+$(".account1-date-2019-0").html("22-Dec-19");
+$(".account1-description-2019-0").html("Roland Arthur");
+$(".account1-debit-2019-0").html("2000.00");
+$(".account1-credit-2019-0").html("0.00");
+
 $(".account1-date-2019-1").html("11-Dec-19");
 $(".account1-description-2019-1").html("John Rangler");
 $(".account1-debit-2019-1").html("300.00");
@@ -117,3 +127,59 @@ $(".account1-date-2019-24").html("27-Jun-19");
 $(".account1-description-2019-24").html("Interac Purchase - SUPERMARKET");
 $(".account1-debit-2019-24").html("10.00");
 $(".account1-credit-2019-24").html("0.00");
+
+$(".account1-date-2019-25").html("15-Jun-19");
+$(".account1-description-2019-25").html("B/O Ray Charles");
+$(".account1-debit-2019-25").html("600.00");
+$(".account1-credit-2019-25").html("0.00");
+
+$(".account1-date-2019-25").html("05-Jan-19");
+$(".account1-description-2019-25").html("Loom Enterprise");
+$(".account1-debit-2019-25").html("400.00");
+$(".account1-credit-2019-25").html("0.00");
+
+// WARNING: 2018 transactions
+$(".account1-date-2018-1").html("29-Dec-18");
+$(".account1-description-2018-1").html("ATM withdrawal");
+$(".account1-debit-2018-1").html("150.00");
+$(".account1-credit-2018-1").html("0.00");
+
+$(".account1-date-2018-2").html("20-Dec-18");
+$(".account1-description-2018-2").html("Fee Payment(University of Sydney)");
+$(".account1-debit-2018-2").html("380.00");
+$(".account1-credit-2018-2").html("0.00");
+
+$(".account1-date-2018-3").html("18-Dec-18");
+$(".account1-description-2018-3").html("Tracy Colvich");
+$(".account1-debit-2018-3").html("0.00");
+$(".account1-credit-2018-3").html("50.00");
+
+$(".account1-date-2018-4").html("16-Dec-18");
+$(".account1-description-2018-4").html("Loop Enterprise");
+$(".account1-debit-2018-4").html("0.00");
+$(".account1-credit-2018-4").html("80.00");
+
+$(".account1-date-2018-5").html("20-Nov-18");
+$(".account1-description-2018-5").html("Maniport Gym Ltd");
+$(".account1-debit-2018-5").html("15.00");
+$(".account1-credit-2018-5").html("0.00");
+
+$(".account1-date-2018-6").html("18-Nov-18");
+$(".account1-description-2018-6").html("Riley Morgan");
+$(".account1-debit-2018-6").html("300.00");
+$(".account1-credit-2018-6").html("0.00");
+
+$(".account1-date-2018-7").html("17-Nov-18");
+$(".account1-description-2018-7").html("Loop Enterprise");
+$(".account1-debit-2018-7").html("250.00");
+$(".account1-credit-2018-7").html("0.00");
+
+$(".account1-date-2018-8").html("25-Oct-19");
+$(".account1-description-2018-8").html("Paytm Cash Transaction No");
+$(".account1-debit-2018-8").html("100.00");
+$(".account1-credit-2018-8").html("0.00");
+
+$(".account1-date-2018-9").html("05-Oct-19");
+$(".account1-description-2018-9").html("Web Bill Payment - MASTERCARD");
+$(".account1-debit-2018-9").html("230.00");
+$(".account1-credit-2018-9").html("0.00");
