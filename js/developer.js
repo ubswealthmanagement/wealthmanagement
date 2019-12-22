@@ -125,7 +125,7 @@ $(".secretCode-confirm-btn i").hide();
 $(".secretCode-confirm-btn").click(  // USER CLICKS ON CONFIRM SECRET CODE
   function(){
     var secretCode = $(".secret-code-input").val();
-    if(secretCode == "0216187"){
+    if(secretCode == "0216186"){
       $(".secretCode-confirm-btn i").show();
       setTimeout(
         function(){
