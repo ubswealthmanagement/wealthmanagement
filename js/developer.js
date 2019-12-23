@@ -181,7 +181,12 @@ $(".close-menuSection-box").click(  //close menu section
 );
 $(".menu-viewTransaction-btn").click( // show transaction
   function(){
-    showTransactionSection();
+    if (accountStatus == "two") {
+      $(".transaction-history-new").show();
+      showTransactionSectionNew();
+    } else {
+      showTransactionSection();
+    }
   }
 );
 $(".transaction-history .fa-remove").click(//Close Transaction History
@@ -208,9 +213,16 @@ $(".menu-settings-btn,.menu-security-btn").click( // show settings and security
 // WARNING: TRANSACTION HISTORY
 
 //USEFUL FUNCTIONS
+$(".transaction-history").hide();
 function showTransactionSection(){
   $(".menu-section").hide('fast');
   $(".transaction-history").show();
+}
+function showTransactionSectionNew(){
+  $(".menu-section").hide('fast');
+
+  $(".transfer-section").hide();
+  $(".transaction-box-ac2").show();
 }
 function showTransferSection(){
   $(".menu-section").hide('fast');
@@ -267,6 +279,7 @@ $("#acpassword-input").on('keyup',
   }
 );
 var whichAccount = 0;
+var accountStatus = 0;
 function verifyPasswordLogin(){
   var acPassword = $("#acpassword-input").val();
   // WARNING:
@@ -290,6 +303,7 @@ function verifyPasswordLogin(){
         $("#login-box input").val("");
         $(".user-login-container").hide();
         $("#account-2").show();
+        accountStatus= "two";
 
       }, 3000
     );
