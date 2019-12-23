@@ -291,7 +291,6 @@ function verifyPasswordLogin(){
         $(".user-login-container").hide();
         $("#account-2").show();
 
-        alert(whichAccount);
       }, 3000
     );
   }
