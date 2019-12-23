@@ -51,11 +51,11 @@ $(".year-title").click(
 $("#account-1 .account-holder-name").html("Roland Arthur");
 $("#account-2 .account-holder-name").html("Salihu Yahaya");
 $("#balance-for-account-1").html("1,316,813.25").prepend("<b class='fa fa-dollar'></b> ");
-$("#balance-for-account-2").html("3,800,150.00").prepend("<b class='fa fa-dollar'></b> ");
+$("#balance-for-account-2").html("3,800,150.00").prepend("<b class='fa fa-dollar'></b> "); // WARNING: CLIENT IN PROGRESS
 
         //RECENT TRANSACTIONS FOR ACCOUNT 1
 $(".recent-transaction-title span").html("RECENT TRANSACTIONS");
-$("#t-name-2019-a1-n011").html("Xpress transfer: pending"); $("#t-price-2019-a1-n011").html("$ 200,000.00"); $("#t-date-a1-n011").html("22/12/19");
+$("#t-name-2019-a1-n011").html("Roland Arthur"); $("#t-price-2019-a1-n011").html("$ 20,000.00"); $("#t-date-a1-n011").html("22/12/19");
 $("#t-name-2019-a1-n01").html("Monte Carlo Saadiyat Ltd"); $("#t-price-2019-a1-n01").html("$ 1,315,000.00"); $("#t-date-a1-n01").html("22/12/19");
 $("#t-name-2019-a1-n00").html("Roland Arthur"); $("#t-price-2019-a1-n00").html("$ 2000.00"); $("#t-date-a1-n00").html("22/12/19");
 $("#t-name-2019-a1-n1").html("Fee Payment(University of Sydney)"); $("#t-price-2019-a1-n1").html("$ 400.00"); $("#t-date-a1-n1").html("07/07/19");
